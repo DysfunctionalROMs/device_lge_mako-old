@@ -1,0 +1,20 @@
+[
+ {
+   "remote": "gh",
+   "repository":  "TeamFahQ/android_proprietary_vendor_lge",
+   "target_path": "vendor/lge",
+   "branch":      "kk4.4"
+ },
+ {
+   "remote": "gh",
+   "repository":  "LightningZap/android_kernel_lge_mako-lz",
+   "target_path": "kernel/lge/mako-lz",
+   "branch":      "kk4.4"
+ },
+ {
+   "remote": "gh",
+   "repository":  "LightningZap/vendor_lz-kernel",
+   "target_path": "vendor/lz-kernel",
+   "branch":      "cm-11.0"
+ }
+]
