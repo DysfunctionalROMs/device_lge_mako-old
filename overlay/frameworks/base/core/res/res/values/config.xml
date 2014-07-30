@@ -284,7 +284,7 @@
     <integer name="config_deviceHardwareKeys">0</integer>
 
     <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
+<add-resource type="bool" name="config_enableTorch">true</add-resource>
 
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 </resources>
