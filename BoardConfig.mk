@@ -25,7 +25,7 @@ TARGET_CPU_VARIANT := krait
 
 TARGET_KERNEL_CONFIG := mako_defconfig
 TARGET_KERNEL_SOURCE        := kernel/lge/mako-lz
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7-13.04/bin/arm-linux-gnueabihf-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-arm-eabi-4.7
 
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
