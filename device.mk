@@ -29,18 +29,12 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_PACKAGES := \
-	lights.mako
+	lights.mako \
+	Torch
 
 PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-        LiveWallpapers \
-        LiveWallpapersPicker \
-        VisualizationWallpapers \
-        librs_jni
+	charger_res_images \
+	charger
 
 PRODUCT_COPY_FILES += \
 	device/lge/mako/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
@@ -101,25 +95,29 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.mako \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
+	nfc_nci.mako \
+	NfcNci \
+	Tag \
+	com.android.nfc_extras
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/lge/mako/nfc/nfcee_access.xml
+	NFCEE_ACCESS_PATH := device/lge/mako/nfc/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/lge/mako/nfc/nfcee_access_debug.xml
+	NFCEE_ACCESS_PATH := device/lge/mako/nfc/nfcee_access_debug.xml
 endif
 
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    device/lge/mako/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+	$(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
+	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+	frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+	device/lge/mako/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+
+# Copy init.d files
+PRODUCT_COPY_FILES += \
+	device/lge/mako/01mpdecision:system/etc/init.d/01mpdecision
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196608
@@ -129,7 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio Configuration
 # FIXME: Remove persist.audio.handset.mic and persist.audio.fluence.mode
-#        while switching new audio HAL from legacy HAL
+#	 while switching new audio HAL from legacy HAL
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.audio.handset.mic.type=digital \
 	persist.audio.dualmic.config=endfire \
@@ -182,7 +180,7 @@ PRODUCT_PACKAGES += \
 # Voice processing
 PRODUCT_PACKAGES += libqcomvoiceprocessing
 PRODUCT_COPY_FILES += \
-    device/lge/mako/audio_effects.conf:system/vendor/etc/audio_effects.conf
+	device/lge/mako/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 PRODUCT_PACKAGES += \
 	hci_qcomm_init
@@ -203,7 +201,7 @@ PRODUCT_PACKAGES += \
 	libmmcamera_interface
 
 PRODUCT_PACKAGES += \
-        libmm-omxcore \
+	libmm-omxcore \
 	libdivxdrmdecrypt \
 	libOmxVdec \
 	libOmxVenc \
@@ -213,20 +211,20 @@ PRODUCT_PACKAGES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-        device/lge/mako/gps.conf:system/etc/gps.conf
+	device/lge/mako/gps.conf:system/etc/gps.conf
 
 # GPS
 PRODUCT_PACKAGES += \
-        libloc_adapter \
-        libloc_eng \
-        libloc_api_v02 \
-        libloc_ds_api \
-        libloc_core \
-        libizat_core \
-        libgeofence \
-        libgps.utils \
-        gps.msm8960 \
-        flp.msm8960
+	libloc_adapter \
+	libloc_eng \
+	libloc_api_v02 \
+	libloc_ds_api \
+	libloc_core \
+	libizat_core \
+	libgeofence \
+	libgps.utils \
+	gps.msm8960 \
+	flp.msm8960
 
 PRODUCT_PACKAGES += \
 	bdAddrLoader \
@@ -237,9 +235,7 @@ PRODUCT_PACKAGES += \
 	keystore.msm8960
 
 PRODUCT_PACKAGES += \
-	hostapd_default.conf \
 	wpa_supplicant_overlay.conf \
-	wpa_supplicant.conf \
 	p2p_supplicant_overlay.conf
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -257,10 +253,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true
+	media.aac_51_output_enabled=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        debug.egl.recordable.rgba8888=1
+	debug.egl.recordable.rgba8888=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qc.sensors.wl_dis=true \
@@ -269,22 +265,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
-# Hardware codecs
-PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.hw.aac.encoder=true
-
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc
-
 # QRNGD
 PRODUCT_PACKAGES += qrngd
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# This is the mako-specific audio package
-$(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
-
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
