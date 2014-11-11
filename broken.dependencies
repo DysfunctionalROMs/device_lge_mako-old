@@ -16,5 +16,10 @@
    "repository":  "LightningZap/vendor_lz-kernel",
    "target_path": "vendor/lz-kernel",
    "branch":      "lp"
+[
+{
+"repository": "BrokenOs/device_lge_mako-kernel",
+"target_path": "device/lge/mako-kernel",
+"branch": "lp"
  }
 ]
