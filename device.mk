@@ -19,6 +19,12 @@
 #
 # Everything in this directory will become public
 
+# Prebuilt Kernel
+TARGET_PREBUILT_KERNEL := device/lge/mako-kernel/kernel
+LOCAL_KERNEL := device/lge/mako-kernel/kernel
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
+
 DEVICE_PACKAGE_OVERLAYS := device/lge/mako/overlay
 
 # This device is xhdpi.  However the platform doesn't
