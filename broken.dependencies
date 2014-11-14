@@ -20,6 +20,6 @@
 {
 "repository": "BrokenOs/device_lge_mako-kernel",
 "target_path": "device/lge/mako-kernel",
-"branch": "lp"
+"branch": "lp-rebase"
  }
 ]
