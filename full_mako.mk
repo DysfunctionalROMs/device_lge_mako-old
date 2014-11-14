@@ -30,6 +30,13 @@ PRODUCT_COPY_FILES := device/lge/mako/apns-full-conf.xml:system/etc/apns-conf.xm
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+PRODUCT_NAME := full_mako
+PRODUCT_DEVICE := mako
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := Nexus 4
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 $(call inherit-product-if-exists, vendor/lge/mako/mako-vendor.mk)

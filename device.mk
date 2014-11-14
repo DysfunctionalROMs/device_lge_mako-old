@@ -41,11 +41,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-TARGET_PREBUILT_KERNEL := device/lge/mako-kernel/kernel
-LOCAL_KERNEL := device/lge/mako-kernel/kernel
-
-PRODUCT_COPY_FILES := \
-	$(LOCAL_KERNEL):kernel
+#TARGET_PREBUILT_KERNEL := device/lge/mako-kernel/kernel
+#LOCAL_KERNEL := device/lge/mako-kernel/kernel
+#PRODUCT_COPY_FILES := \
+#	$(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
 	device/lge/mako/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
@@ -246,7 +245,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	telephony.lteOnCdmaDevice=0
+	telephony.lteOnCdmaDevice=1
 
 ifeq ($(findstring tiny, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -269,7 +268,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.sensors.smd=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	persist.sys.usb.config=mtp
+	persist.sys.usb.config=mtp \
+	ro.secure=0
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
