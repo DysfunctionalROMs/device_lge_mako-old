@@ -158,10 +158,6 @@ MALLOC_IMPL := dlmalloc
 
 -include vendor/lge/mako/BoardConfigVendor.mk
 
-BOARD_HAS_NO_SELECT_BUTTON := true
-
-BOARD_HARDWARE_CLASS := device/lge/mako/cmhw/
-
 # LZ vendor scripts
 -include vendor/lz-kernel/mako/lightningzap.mk
 

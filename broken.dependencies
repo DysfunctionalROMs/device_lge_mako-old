@@ -1,9 +1,9 @@
 [
  {
-   "remote": "gh",
-   "repository":  "TeamFahQ/android_proprietary_vendor_lge",
+   "remote":      "github",
+   "repository":  "TheLoonyBin/proprietary_vendor_lge",
    "target_path": "vendor/lge",
-   "branch":      "lp"
+   "branch":      "lp5.0"
  },
  {
    "remote": "gh",
@@ -16,5 +16,18 @@
    "repository":  "LightningZap/vendor_lz-kernel",
    "target_path": "vendor/lz-kernel",
    "branch":      "lp"
+ },
+ {
+   "remote":      "github",
+   "repository":  "TheLoonyBin/proprietary_vendor_broadcom",
+   "target_path": "vendor/broadcom",
+   "branch":      "lp5.0"
+ },
+ {
+   "remote":      "github",
+   "repository":  "TheLoonyBin/proprietary_vendor_qcom",
+   "target_path": "vendor/qcom",
+   "branch":      "lp5.0"
  }
 ]
+
