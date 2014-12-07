@@ -161,3 +161,4 @@ MALLOC_IMPL := dlmalloc
 # LZ vendor scripts
 -include vendor/lz-kernel/mako/lightningzap.mk
 
+BOARD_HARDWARE_CLASS := device/lge/mako/cmhw/
