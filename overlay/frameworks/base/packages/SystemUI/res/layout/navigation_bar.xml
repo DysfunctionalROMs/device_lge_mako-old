@@ -247,6 +247,7 @@
                 android:src="@drawable/ic_sysbar_menu_land"
                 systemui:keyCode="82"
                 android:layout_weight="0"
+                android:visibility="invisible"
                 android:contentDescription="@string/accessibility_menu"
                 />
             <View
