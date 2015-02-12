@@ -25,8 +25,7 @@ TARGET_CPU_VARIANT := krait
 
 TARGET_KERNEL_CONFIG := mako_defconfig
 TARGET_KERNEL_SOURCE        := kernel/lge/mako-lz
-TARGET_GCC_VERSION_ARM := 4.9-linaro
-TARGET_GCC_VERSION_AND := 4.8-linaro
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-14.06/bin/arm-linux-gnueabihf-
 
 # Broken Optimizations
 BROKEIT := true
