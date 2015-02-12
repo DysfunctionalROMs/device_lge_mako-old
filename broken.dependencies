@@ -1,8 +1,20 @@
 [
  {
    "remote":      "github",
-   "repository":  "TheLoonyBin/proprietary_vendor_lge",
-   "target_path": "vendor/lge",
+   "repository":  "AICP/proprietary_vendor_broadcom",
+   "target_path": "vendor/broadcom",
+   "branch":      "lp5.0"
+ },
+ {
+   "remote":      "github",
+   "repository":  "AICP/proprietary_vendor_qcom",
+   "target_path": "vendor/qcom",
+   "branch":      "lp5.0"
+ },
+ {
+   "remote":      "github",
+   "repository":  "AICP/proprietary_vendor_lge",
+   "target_path": "vendor/asus",
    "branch":      "lp5.0"
  },
  {
@@ -16,18 +28,5 @@
    "repository":  "LightningZap/vendor_lz-kernel",
    "target_path": "vendor/lz-kernel",
    "branch":      "lp"
- },
- {
-   "remote":      "github",
-   "repository":  "TheLoonyBin/proprietary_vendor_broadcom",
-   "target_path": "vendor/broadcom",
-   "branch":      "lp5.0"
- },
- {
-   "remote":      "github",
-   "repository":  "TheLoonyBin/proprietary_vendor_qcom",
-   "target_path": "vendor/qcom",
-   "branch":      "lp5.0"
  }
 ]
-
