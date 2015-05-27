@@ -6,7 +6,7 @@
  },
  {
    "remote": "gh",
-   "repository":  "LightningZap/android_kernel_lge_mako-lz",
+   "repository":  "roguesyko/android_kernel_lge_mako-lz",
    "target_path": "kernel/lge/mako-lz",
    "branch":      "lp5.1"
  },
