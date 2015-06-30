@@ -27,6 +27,9 @@ TARGET_KERNEL_CONFIG := mako_defconfig
 TARGET_KERNEL_SOURCE        := kernel/lge/mako-lz
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-14.06/bin/arm-linux-gnueabihf-
 
+# Keepin it block based for the sake of SuperSu
+BLOCK_BASED_OTA=true
+
 # Broken Optimizations
 BROKEIT := true
 
