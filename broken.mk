@@ -29,7 +29,9 @@ PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # TODO: update to lp
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT="google/occam/mako:5.0/LRX21T/1576899:user/release-keys" PRIVATE_BUILD_DESC="occam-user 4.4.4 KTU84P 1227136 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+   PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/mako:5.1.1/LMY47V/1836172:user/release-keys \
+   PRIVATE_BUILD_DESC="occam-user 5.1.1 LMY47V 1836172 release-keys"
 
 # Enable Torch
 PRODUCT_PACKAGES += Torch
